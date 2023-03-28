@@ -17,12 +17,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
     "big.js": "^6.2.1",
     "moment": "^2.29.4",
     "parcel": "^2.8.3"
   },
   "dependencies": {
     "gsap": "npm:@gsap/member@^3.11.5",
-    "jquery": "^3.6.4"
+    "jquery": "^3.6.4",
+    "normalize.css": "^8.0.1"
   }
 }
