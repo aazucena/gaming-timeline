@@ -4,7 +4,7 @@ const StartPage = async(props) => {
     const beforeRender = async() => {
         let hasChildren = $('#app').children().length > 0
         if (hasChildren) {
-            if (props?.transition) {
+            if (props?.transition && !isNaN(props?.transition)) {
                 $('#app').fadeOut(props?.transition ?? 1000)
             } else {
                 $('#app').hide()
@@ -24,7 +24,7 @@ const StartPage = async(props) => {
                     </div>
                     <div class="console-instructions">
                         <span class="instructions">Type ‘start.exe’ and press [Enter] to start the creating video games.</span>
-                        <span class="instructions">Type "credits.exe’ and press [Enter] to show credits and resources on the website.</span>
+                        <span class="instructions">Type "credits.exe’ and press [Enter] to show credits & resources for the website.</span>
                     </div>
                 </div>
                 <div class="console-terminal">
