@@ -1,0 +1,66 @@
+.console
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-start
+	width: 100%
+	height: 100%
+	padding: 4rem
+	& > .console-header,
+	& > .console-terminal
+		padding: 1.75rem
+
+	& > .console-header
+		display: flex
+		flex-direction: column
+		font-size: 2.125rem
+		gap: 1.75rem
+		& *:nth-child(n + 2)
+			margin-left: 1rem
+		& > .console-title
+			display: flex
+			flex-direction: column
+		& > .console-instructions
+			margin-left: 1.5rem
+			display: flex
+			flex-direction: column
+			gap: 1remfasdfkjns
+	& > .console-terminal
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		font-size: 2rem
+		& > .terminal
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+			flex-wrap: wrap
+			line-break: anywhere
+			gap: .5rem
+			max-width: 90ch
+			&:not(:last-child) 
+				& > .terminal-container > .caret
+					display: none
+
+			& > .terminal-container
+				display: flex
+				flex-direction: row
+				justify-content: flex-start
+				max-width: 100%
+				& > .terminal-cli
+					background-color: $terminal-background-color
+					color: $terminal-text-color
+					font-family: $terminal-font
+					border: none
+					caret-color: transparent
+					width: 0ch
+					display: flex
+					flex-wrap: wrap
+					max-width: 90ch
+					overflow: auto
+					&:focus-visible
+						outline-width: 0
+				& > .caret
+					animation: blink 1s step-end infinite
+					border-bottom: 0.5rem solid $terminal-caret-color
+					padding: 1rem

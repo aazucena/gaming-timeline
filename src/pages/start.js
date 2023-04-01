@@ -13,6 +13,7 @@ const StartPage = async(props) => {
         }
         
     }
+
     const render = async() => {
         let page = `
         <div id="start">
@@ -48,6 +49,7 @@ const StartPage = async(props) => {
         }
         
     }
+
     const afterRender = async() => {
     
         let terminal_id = `terminal`
@@ -90,11 +92,13 @@ const StartPage = async(props) => {
         });
         
         
-        let checkCommand = (name) => {
+        let checkCommand = async(name) => {
             switch(true) {
                 case "start.exe" === name:
                 case "start" === name:
                     console.log('Running Video Game History 0.0.1')
+                    let page = (await import('./decades.js')).default
+                    page()
                     break
                 case "credits.exe" === name:
                 case "credits" === name:

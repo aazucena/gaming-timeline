@@ -1,8 +1,9 @@
 @import 'functions'
-@import 'mixins'
-@import 'variables'
 @import 'fonts'
+@import 'variables'
+@import 'utilities'
 @import 'keyframes'
+@import 'mixins'
 @import 'defaults'
 
 #body
@@ -12,9 +13,10 @@
 	align-items: center
 	width: 100%
 	max-height: 100vh
-	&:has(#app > #start)
-		color: #05FF00
-		font-family: 'Inconsolata'
+	&:has(#app > #start),
+	&:has(#app > #credits)
+		color: $terminal-text-color
+		font-family: $terminal-font
 
 #nav
 	display: flex
@@ -22,115 +24,36 @@
 	width: 100%
 	position: absolute
 	top: 0
-	left: 0
-	&:has(+ #app > #start)
+	&:has(+ #app > #start),
+	&:has(+ #app > #credits)
 		display: none
 
-.navbar
-	display: flex
-	flex-direction: row
-	justify-content: space-between
-	width: 100%
-	padding: 1rem 1.75rem
-	& > .navbar-menu
-		display: flex
-		flex-direction: row
-		justify-content: space-evenly
-		gap: 1.75rem
+#app > #main
+		background: linear-gradient(270deg, $main-gradient-color-1, $main-gradient-color-2, $main-gradient-color-3)
+		background-size: 600% 600%
+		animation: main_background 30s ease infinite
 
 #app,
-#start, 
-#ninteen-seventy,
-#ninteen-eighty,
-#ninteen-ninety,
-#twenty-hundred,
-#twenty-ten,
-#twenty-twenty
+#start,
+#credits,
+#decades
 	display: flex
 	flex-direction: column
 	justify-content:  flex-start
 	align-items: center
 	width: 100%
 	height: 100vh
+	
+#start,
+#credits
 	overflow: hidden
 
-#start
-	background-color: black
-
-.console
-	display: flex
-	flex-direction: column
-	justify-content: space-between
-	align-items: flex-start
-	width: 100%
-	height: 100%
-	padding: 4rem
-	& > .console-header,
-	& > .console-terminal
-		padding: 1.75rem
-
-	& > .console-header
-		display: flex
-		flex-direction: column
-		font-size: 2.125rem
-		gap: 1.75rem
-		& *:nth-child(n + 2)
-			margin-left: 1rem
-		& > .console-title
-			display: flex
-			flex-direction: column
-		& > .console-instructions
-			margin-left: 1.5rem
-			display: flex
-			flex-direction: column
-			gap: 1remfasdfkjns
-	& > .console-terminal
-		display: flex
-		flex-direction: column
-		justify-content: flex-end
-		font-size: 2rem
-		& > .terminal
-			display: flex
-			flex-direction: row
-			justify-content: flex-start
-			flex-wrap: wrap
-			line-break: anywhere
-			gap: .5rem
-			max-width: 90ch
-			&:not(:last-child) 
-				& > .terminal-container > .caret
-					display: none
-
-			& > .terminal-container
-				display: flex
-				flex-direction: row
-				justify-content: flex-start
-				max-width: 100%
-				& > .terminal-cli
-					background-color: black
-					color: #05FF00
-					font-family: 'Inconsolata'
-					border: none
-					caret-color: transparent
-					width: 0ch
-					display: flex
-					flex-wrap: wrap
-					max-width: 90ch
-					overflow: auto
-					&:focus-visible
-						outline-width: 0
-				& > .caret
-					animation: blink 1s step-end infinite
-					border-bottom: 0.5rem solid #05FF00
-					padding: 1rem
+#start,
+#credits
+	background-color: $terminal-background-color
 
 
-
-@keyframes blink 
-	from,
-	to 
-		border-color: transparent
-
-	50% 
-		border-color: #05FF00
-
+@import 'components/navbar'
+@import 'components/console'
+@import 'components/main-title-screen'
+@import 'components/decades'

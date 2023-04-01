@@ -1,0 +1,28 @@
+@mixin decade($year)
+  @if $year == 1970
+    background-color: $main-1970-background-color
+    color: $main-1970-text-color
+    border-color: $main-1970-border-color
+    font-family: $main-1970-title-font
+  @else if $year == 1980
+    background-color: $main-1980-background-color
+    color: $main-1980-text-color
+    border-color: $main-1980-border-color
+  @else if $year == 1990
+    background-color: $main-1990-background-color
+    color: $main-1990-text-color
+    border-color: $main-1990-border-color
+  @else if $year == 2000
+    background-color: $main-2000-background-color
+    color: $main-2000-text-color
+    border-color: $main-2000-border-color
+  @else if $year == 2010
+    background-color: $main-2010-background-color
+    color: $main-2010-text-color
+    border-color: $main-2010-border-color
+  @else if $year == 2020
+    background-color: $main-2020-background-color
+    color: $main-2020-text-color
+    border-color: $main-2020-border-color
+  @else 
+    @error "Unknown year #{$year}"
