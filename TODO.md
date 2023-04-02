@@ -1,37 +1,49 @@
 # TODO
 
 1. Get Assets & Resources
--[ ] 1970s
-  -[ ] Assets
+- [ ] 1970s
+  - [ ] Title Screen
+    - Galaxian
+  - [ ] Assets
     - Fonts
     - Images
     - Music
-  -[ ] Color Pallete 
+  - [ ] Color Pallete 
     - Black
     - White
     - Red
     - Blue
     - Green
     - Yellow
-  -[ ] Games
-    -[ ] Space Invaders
-    -[ ] Galaxian
-    -[ ] Oregon Trail
-    -[ ] Asteroids
-    -[ ] Space Race
-    -[ ] Pong
-    -[ ] Sea Wolf
-    -[ ] Tank 
-    -[ ] Computer Space
-    -[ ] F-1
-    -[ ] Breakout
-    -[ ] Head On
-    -[ ] Sargon II                                                                                  
-    -[ ] Sprint
-    -[ ] Zork
-    -[ ] Superman
--[ ] 1980s
--[ ] 1990s
--[ ] 2000s
--[ ] 2010s
--[ ] 2020s
+  - [ ] Games
+    - [ ] Space Invaders
+    - [ ] Galaxian
+    - [ ] Oregon Trail
+    - [ ] Asteroids
+    - [ ] Space Race
+    - [ ] Pong
+    - [ ] Sea Wolf
+    - [ ] Tank 
+    - [ ] Computer Space
+    - [ ] F-1
+    - [ ] Breakout
+    - [ ] Head On
+    - [ ] Sargon II                                                                                  
+    - [ ] Sprint
+    - [ ] Zork
+    - [ ] Superman
+- [ ] 1980s
+  - [ ] Title Screen
+    - Pacman
+- [ ] 1990s
+  - [ ] Title Screen
+    - The Legend Of Zelda: Ocarina Of Time
+- [ ] 2000s
+  - [ ] Title Screen
+    - Minecraft
+- [ ] 2010s
+  - [ ] Title Screen
+    - Super Mario Galaxy
+- [ ] 2020s
+  - [ ] Title Screen
+    - Hades

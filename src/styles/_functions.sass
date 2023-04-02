@@ -25,7 +25,6 @@
 	@else
 		@return brightness(0%) invert(0)
 
-
 /* @refererences: https://getbootstrap.com/docs/5.2/customize/sass/#colors */
 
 // Tint a color: mix a color with white
@@ -39,3 +38,25 @@
 // Shade the color if the weight is positive, else tint it
 @function shift-color($color, $weight)
 	@return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight))
+
+@function extra-text-shadow($color, $layers, $position: -1px, $blur: 1px)
+	$init: $position -1px $blur shade-color($color, 25%)
+	$value: ()
+	$value: append($value, $init, comma)
+	@for $i from 1 through $layers
+		$shadow: $i + px
+		$alpha: 100% - (calc(($i - 1)/$layers) * 100%)
+		$text-shadow: $position $shadow $blur $color
+		$value: append($value, $text-shadow, comma)
+	$end-shadow: ((($layers + 1) + 2) + px)
+	$end: $position $end-shadow $blur shade-color($color, 12.5%)
+	$value: append($value, $end, comma)
+	@return $value
+
+/* @references https://codepen.io/Suburbanno/pen/OXeMvw */
+@function generate-stars($n, $color: #FFF)
+	$value: '#{random(2000)}px #{random(20000)}px #{$color}'
+	@for $i from 2 through $n
+		$value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$color}'
+
+	@return unquote($value)
