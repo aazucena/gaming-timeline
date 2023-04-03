@@ -10,7 +10,7 @@
     "clean": "rimraf public",
     "prebuild": "rimraf public && rimraf .parcel-cache && rimraf dist",
     "build": "parcel build --dist-dir public && cpx  \"src/assets/**/*\" public/assets",
-    "predeploy": "rimraf public && parcel build --dist-dir public --public-url \"https://aazucena.github.io/gaminsights/\" && cpx \"src/assets/**/*\" public/assets",
+    "predeploy": "rimraf public && parcel build --dist-dir public --public-url \"https://aazucena.github.io/gaming-timeline/\" && cpx \"src/assets/**/*\" public/assets",
     "deploy": "gh-pages -d public"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
     "@studio-freight/lenis": "^1.0.6",
     "aos": "^2.3.4",
     "big.js": "^6.2.1",
+    "cpx": "^1.5.0",
     "easing-js": "^1.1.2",
     "gh-pages": "^5.0.0",
     "locomotive-scroll": "^4.1.4",

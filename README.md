@@ -1,4 +1,4 @@
-# GamInsightsGAming Timeline
+# Gaming Timeline
 
 ## Instructions
 
