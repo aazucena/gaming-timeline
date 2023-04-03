@@ -54,18 +54,23 @@ const StartPage = async(props) => {
     
         let terminal_id = `terminal`
         let terminal_cli = $(`.${terminal_id} > .terminal-container > .terminal-cli`);
-        
-        $(document).on('keypress', (event) => {
-            let value = event.target.value;
+        terminal_cli.trigger('focus')
+        let onKeyPress = (event) => {
+            terminal_cli.trigger('focus')
+            let value = !!event.target.value === false ? $(`.${terminal_id} > .terminal-container > .terminal-cli`).val() : event.target.value;
             value = value === '' && event.originalEvent.key !==  'Enter' ? event.originalEvent.key : value;
             let width = value.length + 1;
             if (width >= 0) {
                 terminal_cli.width(`${width}ch`);
             }
-        });
-        $(document).on('keydown', (event) => {
+        }
+        $(document).on('keypress', onKeyPress);
+        $(document.body).on('keypress', onKeyPress);
+
+        let onKeyDown = (event) => {
+            terminal_cli.trigger('focus')
             let key = event.originalEvent.key;
-            let value = event.target.value
+            let value = !!event.target.value === false ? $(`.${terminal_id} > .terminal-container > .terminal-cli`).val() : event.target.value
             switch (key) {
                 case 'Backspace':
                 case 'Delete':
@@ -89,7 +94,10 @@ const StartPage = async(props) => {
                     break;
             }
             // $(event.target).width(`${width}ch`)
-        });
+        }
+
+        $(document).on('keydown', onKeyDown);
+        $(document.body).on('keydown', onKeyDown);
         
         
         let checkCommand = async(name) => {
@@ -105,13 +113,20 @@ const StartPage = async(props) => {
                     console.log('Running Credits for Video Game History 0.0.1')
                     break
                 default:
+                    if (name.length > 0) {
+                        $('.console-terminal .terminal-popup').remove()
+                        let result = name.length > 12 ? name.slice(0, 12)+'...' : name
+                        $('.console-terminal').prepend(`<div class="terminal-popup">There is no command: "${result}"</div>`)
+                    }
                     break
             }
         }
     }
     beforeRender()
     render()
-    afterRender()
+    setTimeout(() => {
+        afterRender()
+    }, 500)
 }
 
 export default StartPage

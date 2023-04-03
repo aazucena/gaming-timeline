@@ -15,7 +15,7 @@ $years: (1970, 1980, 1990, 2000, 2010, 2020)
     justify-content: center
     align-items: center
     width: 100%
-    height: 100vh
+    height: 110vh
   & > .title-screen > .header
     font-size: 16rem
     & > .svg-chars
@@ -61,10 +61,18 @@ $years: (1970, 1980, 1990, 2000, 2010, 2020)
         opacity: 0
       & > .mario-coin
         width: 13.75vmin
+      &:has(> .ocarina-note)
+        padding: 0.75rem
+        gap: 0.75rem
+        opacity: 0
+      & > .ocarina-note
+        transform: scale(0.75)
+        width: 12.75vmin
     & > .title
       -webkit-user-select: none
       -ms-user-select: none
       user-select: none
+      z-index: 7777
 
 @each $year in $years
   #decade-#{$year}

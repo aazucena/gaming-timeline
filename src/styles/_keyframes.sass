@@ -75,6 +75,39 @@
 		-webkit-transform: translateY(-6.4px)
 		transform: translateY(-6.4px)
 
+@keyframes heartbeat
+	from
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		-webkit-transform-origin: center center
+		transform-origin: center center
+		-webkit-animation-timing-function: ease-out
+		animation-timing-function: ease-out
+
+	10%
+		-webkit-transform: scale(0.91)
+		transform: scale(0.91)
+		-webkit-animation-timing-function: ease-in
+		animation-timing-function: ease-in
+
+	17%
+		-webkit-transform: scale(0.98)
+		transform: scale(0.98)
+		-webkit-animation-timing-function: ease-out
+		animation-timing-function: ease-out
+
+	33%
+		-webkit-transform: scale(0.87)
+		transform: scale(0.87)
+		-webkit-animation-timing-function: ease-in
+		animation-timing-function: ease-in
+
+	45%
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		-webkit-animation-timing-function: ease-out
+		animation-timing-function: ease-out
+
 @keyframes stars
 	from
 		transform: translateX(-1000px) translateY(0px) scale(1.75)
@@ -88,6 +121,19 @@
 	to
 		opacity: 1
 		transform: translateY(-180px)
+
+@keyframes note
+	0%
+		opacity: 0
+		transform: translateY(0px)
+	0%
+		opacity: 0
+		transform: translateY(-120px)
+	50%
+		opacity: 1
+	100%
+		opacity: 1
+		transform: translateY(-220px)
 
 @keyframes laser
 	0%

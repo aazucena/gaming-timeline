@@ -3,8 +3,9 @@ import galaxian from 'bundle-text:../assets/svg/galaxian-ship.svg'
 import among_us from 'bundle-text:../assets/svg/among-us-red-ejected.svg'
 import pacman from 'bundle-text:../assets/svg/pacman.svg'
 import mario_coin from 'bundle-text:../assets/svg/mario-coin.svg'
+import ocarina_note from 'bundle-text:../assets/svg/ocarina-note.svg'
 import gsap from '../utils/gsap';
-import { mapCalc } from '../utils';
+import { randomInteger } from '../utils';
 
 const DecadeScreen = (props = {}) => {
     let title = props?.year
@@ -16,6 +17,7 @@ const DecadeScreen = (props = {}) => {
           title = `${title}`.split('').map((l) => `<span>${l}</span>`).join('')
           break
         case 1990:
+          title = `${title}`.split('').map((l) => `<div>${l}</div>`).join('')
           break
         case 2000:
           break
@@ -84,6 +86,40 @@ const DecadeScreen = (props = {}) => {
           gsap.to(`#decade-${props?.year} .title span`, {opacity: 1, ease: 'none'}, "+=5")
           break
         case 1990:
+          let note_colors = [
+            '#6CBE3A',
+            '#E14C4C',
+            '#5874ED',
+            '#EAB22A',
+            '#D14EED',
+            '#DCF567',
+            '#E2E2E2',
+          ]
+          $(`#decade-${props?.year} .header`).prepend(`<div class="svg-chars"></div>`)
+          $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${ocarina_note}</div>`)
+          $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${ocarina_note}</div>`)
+          $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${ocarina_note}</div>`)
+          $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${ocarina_note}</div>`)
+          let letters_1990 = $(`#decade-${props?.year} .title div`)
+          letters_1990.each((i, _) => {
+            let index = i + 1
+            let letter = $(`#decade-${props?.year} .title div:nth-child(${index})`)
+            letter.on('click', () => {
+              let color = note_colors[randomInteger(0, note_colors.length)]
+              console.log(`Note #${index}`)
+              let note = $(`#decade-${props?.year} .svg-chars .svg-char:nth-child(${index})`)
+              let svg = $(`#decade-${props?.year} .svg-chars .svg-char:nth-child(${index}) .note`)
+              note.css({ animation: "note 0.3s cubic-bezier(0.64, 0.57, 0.67, 1.53) both" })
+              svg.css({ 'fill': color })
+              letter.css({ animation: 'heartbeat 0.2s linear both' })
+              setTimeout(() => {
+                note.css({ animation: "none", opacity: 0 })
+                letter.css({ animation: 'none' })
+                svg.css({ 'fill': 'white' })
+              }, 500)
+
+            })
+          })
           break
         case 2000:
           $(`#decade-${props?.year} .title`).on('click', () => {
@@ -101,9 +137,8 @@ const DecadeScreen = (props = {}) => {
           $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${mario_coin}</div>`)
           $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${mario_coin}</div>`)
           $(`#decade-${props?.year} .header .svg-chars`).prepend(`<div class="svg-char">${mario_coin}</div>`)
-          let letters = $(`#decade-${props?.year} .title div`)
-          console.log("🚀 ~ file: decade.js:96 ~ afterRender ~ letters:", letters)
-          letters.each((i, _) => {
+          let letters_2010 = $(`#decade-${props?.year} .title div`)
+          letters_2010.each((i, _) => {
             let index = i + 1
             let letter = $(`#decade-${props?.year} .title div:nth-child(${index})`)
             letter.on('click', () => {
@@ -132,6 +167,7 @@ const DecadeScreen = (props = {}) => {
               trigger: `#decade-${props?.year}`,
               start: "top top",
             },
+            repeat: -1,
           })
         break
         default:
@@ -145,10 +181,6 @@ const DecadeScreen = (props = {}) => {
           <div class="title-screen">
             <div class="header">
               <div class="title">${title}</div>
-            </div>
-          </div>
-          <div class="game-screen">
-            <div class="game-grid">
             </div>
           </div>
       </div>`;

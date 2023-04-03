@@ -2,7 +2,7 @@
   .stars-container
     width: 100%
     display: flex
-    height: 200vh
+    height: 110vh
     position: absolute
     left: 0
     overflow: hidden
@@ -63,6 +63,8 @@
     color: $main-1990-text-color
     border-color: $main-1990-border-color
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-1990-title-font
       text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5), 0 0.5px 0 #F70202, 0 0 0 tint-color(#F70202, 37.5%), 2px -2px 0 rgba(255, 255, 255, 0.9)
   @else if $year == 2000

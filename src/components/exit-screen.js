@@ -11,6 +11,11 @@ const ExitScreen = async(props) => {
   }
   const afterRender = async() => {
     update()
+    $('#exit-screen .button').on('click', async() => {
+      
+      let page = (await import('../pages/start.js')).default
+      page()
+    })
   }
   const render = async() => {
     beforeRender()
@@ -22,7 +27,9 @@ const ExitScreen = async(props) => {
                 </div>
             </div>
         </div>`;
-    afterRender()
+    setTimeout(() => {
+      afterRender()
+    }, 400)
     return page
   }
   return await render()
