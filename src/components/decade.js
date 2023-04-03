@@ -181,7 +181,7 @@ const DecadeScreen = (props = {}) => {
       <div class="decade" id="decade-${props?.year}">
           <div class="title-screen">
             <div class="header">
-              <div class="title">${title}</div>
+              <div class="title" draggable="false">${title}</div>
             </div>
           </div>
       </div>`;

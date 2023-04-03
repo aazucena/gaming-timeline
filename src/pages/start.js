@@ -92,7 +92,6 @@ const StartPage = async (props) => {
 					}
 					break;
 				case 'Enter':
-					console.log('🚀 ~ file: start.js:86 ~ onKeyDown ~ value:', value);
 					if (value && value.trim().length > 0) {
 						checkCommand(key, value);
 						event.target.value = '';
@@ -101,7 +100,6 @@ const StartPage = async (props) => {
 				default:
 					if (key.length === 1) {
 						terminal_cli.val(value);
-						console.log('🚀 ~ file: app.js:19 ~ $ ~ value:', value);
 					}
 					break;
 			}
@@ -147,7 +145,8 @@ const StartPage = async (props) => {
 			switch (true) {
 				case 'start.exe' === name:
 				case 'start' === name:
-					$('.console-terminal .terminal').remove();
+                    $('.console-terminal .terminal-popup').remove();
+                    $('.console-terminal .terminal').remove();
 					$('.console-terminal').prepend(
 						`<div class="terminal-popup">Running Video Game History 0.0.1...</div>`
 					);
@@ -162,6 +161,8 @@ const StartPage = async (props) => {
 					break;
 				case 'credits.exe' === name:
 				case 'credits' === name:
+                    $('.console-terminal .terminal-popup').remove();
+                    $('.console-terminal .terminal').remove();
 					$('.console-terminal').prepend(
 						`<div class="terminal-popup">Running Credits for Video Game History 0.0.1...</div>`
 					);
