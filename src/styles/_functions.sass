@@ -53,6 +53,19 @@
 	$value: append($value, $end, comma)
 	@return $value
 
+@function shadow-stroke($color, $width: 1px)
+	$right: $width 0 0 $color
+	$bottom: 0 $width 0 $color
+	$left: ($width * -1) 0 0 $color
+	$bottom: 0 ($width * -1) 0 $color
+	$value: ()
+	$value: append($value, $right, comma)
+	$value: append($value, $bottom, comma)
+	$value: append($value, $left, comma)
+	$value: append($value, $bottom, comma)
+	@return $value
+
+
 /* @references https://codepen.io/Suburbanno/pen/OXeMvw */
 @function generate-stars($n, $color: #FFF)
 	$value: '#{random(2000)}px #{random(20000)}px #{$color}'

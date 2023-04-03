@@ -1,8 +1,12 @@
 html
   scroll-behavior: smooth
-  
+
 .scroll-content
   width: 100%
 
 .scrollbar-track
   background: transparent !important
+  z-index: 9999 !important
+  
+::-webkit-scrollbar
+  display: none

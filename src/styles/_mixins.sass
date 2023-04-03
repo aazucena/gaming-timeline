@@ -64,8 +64,7 @@
     border-color: $main-1990-border-color
     .title-screen > .header > .title
       font-family: $main-1990-title-font
-      -webkit-text-stroke: 0.75px #282828
-      text-shadow: 0 0.5px 0 #F70202, 0 0 0 tint-color(#F70202, 37.5%)
+      text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5), 0 0.5px 0 #F70202, 0 0 0 tint-color(#F70202, 37.5%), 2px -2px 0 rgba(255, 255, 255, 0.9)
   @else if $year == 2000
     background-color: $main-2000-background-color
     color: $main-2000-text-color
@@ -82,31 +81,26 @@
     border-color: $main-2010-border-color
     @include stars-background(#FFF)
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-2010-title-font
-      -webkit-text-stroke: 7px #FFFFFF
+      -webkit-text-stroke: 6px #FFFFFF
+      -webkit-text-fill-color: transparent
       transform: rotateX(15deg)
       perspective: 9999px
       transform-style: preserve-3d
-      & span
+      & div
         padding: 0 0.25rem
         background-clip: text
         -webkit-background-clip: text
-      & span:nth-child(1)
-        text-shadow: 1px 1px 0px rgba(#049CD8, 90%), extra-text-shadow(shade-color(#FFFFFF, 12.5%), 40, 1px, 0px) !important
-        background-image: radial-gradient(circle, #049CD8 0%, black 100%)
-        color: rgba(#049CD8, 62.5%)
-      & span:nth-child(2)
-        text-shadow: 1px 1px 0px rgba(#43B047, 90%), extra-text-shadow(shade-color(#FFFFFF, 12.5%), 40, 1px, 0px) !important
-        background-image: radial-gradient(circle, #43B047 0%, black 100%)
-        color: rgba(#43B047, 62.5%)
-      & span:nth-child(3)
-        text-shadow: 1px 1px 0px rgba(#FBD000, 90%), extra-text-shadow(shade-color(#FFFFFF, 12.5%), 40, 1px, 0px) !important
-        background-image: radial-gradient(circle, #FBD000 0%, black 100%)
-        color: rgba(#FBD000, 62.5%)
-      & span:nth-child(4)
-        text-shadow: 1px 1px 0px rgba(#E52521, 90%), extra-text-shadow(shade-color(#FFFFFF, 12.5%), 40, 1px, 0px) !important
-        background-image: radial-gradient(circle, #E52521 0%, black 100%)
-        color: rgba(#E52521, 62.5%)
+      & div:nth-child(1)
+        text-shadow: 0px 1px 4px rgba(#049CD8, 90%), 0px 4px 4px #EEE, 2px 8px 4px #DDD, 3px 16px 4px #CCC, extra-text-shadow(shade-color(#FFFFFF, 25%), 35, 1px, 0px)
+      & div:nth-child(2)
+        text-shadow: 0px 1px 4px rgba(#43B047, 90%), 0px 4px 4px #EEE, 2px 8px 4px #DDD, 3px 16px 4px #CCC, extra-text-shadow(shade-color(#FFFFFF, 25%), 35, 1px, 0px)
+      & div:nth-child(3)
+        text-shadow: 0px 1px 4px rgba(#FBD000, 90%), 0px 4px 4px #EEE, 2px 8px 4px #DDD, 3px 16px 4px #CCC, extra-text-shadow(shade-color(#FFFFFF, 25%), 35, 1px, 0px)
+      & div:nth-child(4)
+        text-shadow: 0px 1px 4px rgba(#E52521, 90%), 0px 4px 4px #EEE, 2px 8px 4px #DDD, 3px 16px 4px #CCC, extra-text-shadow(shade-color(#FFFFFF, 25%), 35, 1px, 0px)
   @else if $year == 2020
     background-color: $main-2020-background-color
     color: $main-2020-text-color

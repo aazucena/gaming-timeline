@@ -1,6 +1,6 @@
 $years: (1970, 1980, 1990, 2000, 2010, 2020)
 
-#decades > .decade
+#decades .decade
   display: flex
   flex-direction: column
   justify-content: flex-start
@@ -18,6 +18,43 @@ $years: (1970, 1980, 1990, 2000, 2010, 2020)
     height: 100vh
   & > .title-screen > .header
     font-size: 16rem
+    & > .svg-chars
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      padding: 1rem
+      position: absolute
+      & > .svg-char
+        position: relative
+    & .svg-char
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      padding: 1rem
+      position: absolute
+      &:has(> .galaxian)
+        transform: translateY(450px)
+      & > .galaxian
+        width: 10vmin
+      &:has(> .among-us)
+        transform: translateY(0px)
+      & > .among-us
+        transform: scale(2.5) translateX(-480px)
+        width: 20vmin
+      &:has(> .pacman)
+        transform: translateY(0px)
+      & > .pacman
+        transform: scale(2.5) translateX(-480px)
+        z-index: 5555
+        width: 20vmin
+      &:has(> .mario-coin)
+        padding: 0.75rem
+        gap: 0.75rem
+        opacity: 0
+      & > .mario-coin
+        width: 13.75vmin
     & > .title
       -webkit-user-select: none
       -ms-user-select: none

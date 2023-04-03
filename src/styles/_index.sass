@@ -13,6 +13,11 @@
 	align-items: center
 	width: 100%
 	max-height: 100vh
+	overflow-x: hidden
+	& > .scroll-content
+		width: 100%
+		max-height: 100vh
+		z-index: 4000
 	&:has(#app > #start),
 	&:has(#app > #credits)
 		color: $terminal-text-color
@@ -33,6 +38,10 @@
 		background-size: 600% 600%
 		animation: main_background 30s ease infinite
 
+#app > #exit
+	background-size: 600% 600%
+	height: 100vh
+
 #app,
 #start,
 #credits,
@@ -42,11 +51,11 @@
 	justify-content:  flex-start
 	align-items: center
 	width: 100%
-	height: 100vh
 	
 #start,
 #credits
 	overflow: hidden
+	height: 100vh
 
 #start,
 #credits
@@ -57,3 +66,4 @@
 @import 'components/console'
 @import 'components/main-title-screen'
 @import 'components/decades'
+@import 'components/exit-screen'

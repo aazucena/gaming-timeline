@@ -6,8 +6,6 @@ import $ from 'jquery';
 
 import StartPage from './pages/start.js'
 
-overlay_scrollbars()
-
 Splitting()
 
 StartPage()

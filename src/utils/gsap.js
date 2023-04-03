@@ -11,4 +11,5 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(Flip, ScrollTrigger, Observer, ScrollToPlugin, Draggable, EaselPlugin, MotionPathPlugin, PixiPlugin, TextPlugin);
 
+
 export default gsap

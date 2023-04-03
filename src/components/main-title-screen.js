@@ -20,7 +20,7 @@ const MainTitleScreen = async(props) => {
 					<div id="main">
 							<div class="main-screen" id="main-screen">
 									<div class="header">
-										<div class="title" data-scroll>${title}</div>
+										<div class="title">${title}</div>
 									</div>
 							</div>
 					</div>`;

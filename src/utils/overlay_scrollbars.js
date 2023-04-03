@@ -10,7 +10,11 @@ import {
 OverlayScrollbars.plugin([ScrollbarsHidingPlugin, SizeObserverPlugin, ClickScrollPlugin]);
 
 const overlay_scrollbars = () => {
-  OverlayScrollbars(document.querySelector('#body'), {})
+  OverlayScrollbars(document.querySelector('#body'), {
+    overflow: {
+      x: 'hidden',
+    },
+  })
 }
 
 export default overlay_scrollbars
