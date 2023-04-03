@@ -33,6 +33,16 @@ const DecadeScreen = (props = {}) => {
         case 1970:
           $(`#decade-${props?.year}`).prepend('<div class="stars-container"><div class="stars small"></div><div class="stars medium"></div><div class="stars large"></div></div>')
           $(`#decade-${props?.year} .header`).prepend(`<div class="svg-char">${galaxian}</div>`)
+          $(`#decade-${props?.year}`).on('click', () => {
+            let left_laser = $('.left-laser')
+            let right_laser = $('.right-laser')
+            left_laser.css({ 'animation': `laser 0.4s linear both`})
+            right_laser.css({ 'animation': `laser 0.4s linear both`})
+            setTimeout(() => {
+              left_laser.css({ animation: 'none' })
+              right_laser.css({ animation: 'none' })
+          }, 400)
+          })
           $(`#decade-${props?.year}`).on('mousemove', (event) => {
             let svg = $('.svg-char:has(> .galaxian)')
             let transform = svg.css('transform').split(/[()]/)[1]
@@ -70,7 +80,7 @@ const DecadeScreen = (props = {}) => {
           gsap.to(`#decade-${props?.year} .title span:nth-child(2)`, {opacity: 0, ease: 'none'}, "+=0.125")
           gsap.to(`#decade-${props?.year} .title span:nth-child(3)`, {opacity: 0, ease: 'none'}, "+=0.125")
           gsap.to(`#decade-${props?.year} .title span:nth-child(4)`, {opacity: 0, ease: 'none'}, "+=0.125")
-          gsap.to(`#decade-${props?.year} .title`, {fontFamily: 'CrackMan'}, "+=0")
+          gsap.to(`#decade-${props?.year} .title`, {fontFamily: 'CrackMan'}, "+=1")
           gsap.to(`#decade-${props?.year} .title span`, {opacity: 1, ease: 'none'}, "+=5")
           break
         case 1990:

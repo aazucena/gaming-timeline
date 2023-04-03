@@ -38,6 +38,12 @@ $years: (1970, 1980, 1990, 2000, 2010, 2020)
         transform: translateY(450px)
       & > .galaxian
         width: 10vmin
+        overflow: visible
+        & .left-laser,
+        & .right-laser
+          opacity: 0
+          fill-opacity: 0
+          position: absolute
       &:has(> .among-us)
         transform: translateY(0px)
       & > .among-us
