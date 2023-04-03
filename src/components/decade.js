@@ -68,8 +68,9 @@ const DecadeScreen = (props = {}) => {
           break
         case 1980:
           $(`#decade-${props?.year} .header`).prepend(`<div class="svg-char">${pacman}</div>`)
-          gsap.set(`#decade-${props?.year} .title`, { fontFamily: 'Pacman Dots'})
-          gsap.fromTo('.pacman', {x: -1920, scale: 6}, {
+          let pacman_tl = gsap.timeline()
+          pacman_tl.set(`#decade-${props?.year} .title`, { fontFamily: 'Pacman Dots'})
+          pacman_tl.fromTo('.pacman', {x: -1920, scale: 6}, {
             x: 1920, 
             duration: 16,
             immediateRender: false,
@@ -78,12 +79,12 @@ const DecadeScreen = (props = {}) => {
               start: "top top",
             },
           }, "<")
-          gsap.to(`#decade-${props?.year} .title span:nth-child(1)`, {opacity: 0, ease: 'none'}, "+=7")
-          gsap.to(`#decade-${props?.year} .title span:nth-child(2)`, {opacity: 0, ease: 'none'}, "+=0.125")
-          gsap.to(`#decade-${props?.year} .title span:nth-child(3)`, {opacity: 0, ease: 'none'}, "+=0.125")
-          gsap.to(`#decade-${props?.year} .title span:nth-child(4)`, {opacity: 0, ease: 'none'}, "+=0.125")
-          gsap.to(`#decade-${props?.year} .title`, {fontFamily: 'CrackMan'}, "+=1")
-          gsap.to(`#decade-${props?.year} .title span`, {opacity: 1, ease: 'none'}, "+=5")
+          pacman_tl.to(`#decade-${props?.year} .title span:nth-child(1)`, {opacity: 0, ease: 'none'}, "+=4")
+          pacman_tl.to(`#decade-${props?.year} .title span:nth-child(2)`, {opacity: 0, ease: 'none'}, "+=0.125")
+          pacman_tl.to(`#decade-${props?.year} .title span:nth-child(3)`, {opacity: 0, ease: 'none'}, "+=0.125")
+          pacman_tl.to(`#decade-${props?.year} .title span:nth-child(4)`, {opacity: 0, ease: 'none'}, "+=0.125")
+          pacman_tl.to(`#decade-${props?.year} .title`, {fontFamily: 'CrackMan'}, "+=1")
+          pacman_tl.to(`#decade-${props?.year} .title span`, {opacity: 1, ease: 'none'}, "+=5")
           break
         case 1990:
           let note_colors = [
