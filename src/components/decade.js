@@ -107,17 +107,19 @@ const DecadeScreen = (props = {}) => {
             let letter = $(`#decade-${props?.year} .title div:nth-child(${index})`)
             letter.on('click', () => {
               let color = note_colors[randomInteger(0, note_colors.length)]
-              console.log(`Note #${index}`)
               let note = $(`#decade-${props?.year} .svg-chars .svg-char:nth-child(${index})`)
               let svg = $(`#decade-${props?.year} .svg-chars .svg-char:nth-child(${index}) .note`)
               note.css({ animation: "note 0.3s cubic-bezier(0.64, 0.57, 0.67, 1.53) both" })
               svg.css({ 'fill': color })
-              letter.css({ animation: 'heartbeat 0.2s linear both' })
+              letter.css({ animation: 'heartbeat 0.6s linear both' })
               setTimeout(() => {
                 note.css({ animation: "none", opacity: 0 })
                 letter.css({ animation: 'none' })
                 svg.css({ 'fill': 'white' })
               }, 500)
+              setTimeout(() => {
+                letter.css({ animation: 'none' })
+              }, 4000)
 
             })
           })
@@ -158,8 +160,31 @@ const DecadeScreen = (props = {}) => {
         case 2020:
           $(`#decade-${props?.year}`).prepend('<div class="stars-container"><div class="stars small"></div><div class="stars medium"></div><div class="stars large"></div></div>')
           $(`#decade-${props?.year} .header`).prepend(`<div class="svg-char">${among_us}</div>`)
-          gsap.set('.among-us', {x: -1400, rotateZ: 0, scaleY: 2.5})
-          gsap.to('.among-us', {
+
+          let a_colors = gsap.utils.random([
+            "#C51111",
+            "#132ED1",
+            "#117F2D",
+            "#ED54BA",
+            "#EF7D0E",
+            "#F6F658",
+            "#3F474E",
+            "#D6E0F0",
+            "#6B31BC",
+            "#71491E",
+            "#38FEDB",
+            "#50EF39",
+            "#1D9853",
+            "#918977",
+          ], true)
+          
+          $('.among-us .main-color').css({ fill: a_colors() })
+          gsap.fromTo('.among-us', {
+            x: -1400, 
+            rotateZ: 0,
+            y: "random(-400, 400)", 
+            scale: 2.5
+          }, {
             x: 1400, 
             rotateZ: 360, 
             duration: 8,
@@ -168,8 +193,13 @@ const DecadeScreen = (props = {}) => {
               trigger: `#decade-${props?.year}`,
               start: "top top",
             },
-            repeat: -1,
-          })
+            repeat:-1,
+            repeatRefresh:true,
+            onRepeat: () => {
+              console.log('Completed')
+              $('.among-us .main-color').css({ fill: a_colors() })
+            }
+          }, '<')
         break
         default:
           break

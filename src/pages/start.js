@@ -32,7 +32,7 @@ const StartPage = async (props) => {
                             V:\\video-games>
                         </span>
                         <span class="terminal-container">
-                            <input type="text" id="terminal" class="terminal-cli" autofocus autocomplete="false"/>
+                            <input type="text" id="terminal" class="terminal-cli" autofocus autocomplete="off"/>
                             <span class="caret"> </span>
                         </span>
                     </div>
