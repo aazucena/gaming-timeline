@@ -20,6 +20,7 @@
 		& > .console-title
 			display: flex
 			flex-direction: column
+			font-variation-settings: "wght" 800
 		& > .console-instructions
 			margin-left: 1.5rem
 			display: flex
@@ -39,18 +40,37 @@
 				& > .category
 					display: flex
 					flex-direction: column
+					font-variation-settings: "wght" 700, "wdth" 112.501
 				& > .credits
 					margin-left: 1.5rem
 					display: flex
 					flex-direction: column
 					gap: 0.5rem
 					& > .credit
-						&:before
-							content: '- '
 						display: flex
 						flex-direction: row
 						gap: 1rem
 						text-decoration: none
+						&a,
+						&:any-link
+							color: magenta !important
+						&:before
+							content: '◇ '
+							color: $terminal-text-color !important
+						&:after
+							content: ' ⏎'
+							position: relative
+							top: -7px
+							left: -7px
+							color: magenta !important
+						&:hover
+							color: cyan !important
+							font-variation-settings: "wght" 900, "wdth" 87.501
+							&:before
+								content: '✔ '
+							&:after
+								content: ''
+
 	& > .console-terminal
 		display: flex
 		flex-direction: column

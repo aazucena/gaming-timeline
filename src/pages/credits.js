@@ -20,25 +20,26 @@ const credits = (props) => {
 			</div>
 			<div class="console-credits">
 				<div class="credits-category">
-					<span class="category">Games & its Resources</span>
+					<span class="category">Games & Their Resources</span>
 					<div class="credits">
-						<span class="credit">Galaxian</span>
-						<span class="credit">Pac-man</span>
-						<span class="credit">Legend of Zelda: Ocarina of Time</span>
-						<span class="credit">Minecraft</span>
-						<span class="credit">Super Mario Galaxy 2</span>
-						<span class="credit">Among Us</span>
+						<a href="https://en.wikipedia.org/wiki/Galaxian" target="_blank" class="credit">Galaxian</a>
+						<a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank" class="credit">Pac-man</a>
+						<a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time" target="_blank" class="credit">Legend of Zelda: Ocarina of Time</a>
+						<a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank" class="credit">Minecraft</a>
+						<a href="https://en.wikipedia.org/wiki/Super_Mario_Galaxy_2" target="_blank" class="credit">Super Mario Galaxy 2</a>
+						<a href="https://en.wikipedia.org/wiki/Among_Us" target="_blank" class="credit">Among Us</a>
 					</div>
 				</div>
 				<div class="credits-category">
-					<span class="category">Technologies used</span>
+					<span class="category">Technologies Used</span>
 					<div class="credits">
-						<span class="credit">HTML</span>
-						<span class="credit">Sass</span>
-						<span class="credit">Javascript with JQuery</span>
-						<span class="credit">GSAP</span>
-						<span class="credit">Parcel Bundler</span>
-						<span class="credit">Howler</span>
+						<a href="https://parceljs.org/" target="_blank" class="credit">Parcel Bundler 2</a>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="credit">HTML</a>
+						<a href="https://sass-lang.com/" target="_blank" class="credit">Sass</a>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="credit">Javascript</a>
+						<a href="https://jquery.com/" target="_blank" class="credit">JQuery</a>
+						<a href="https://greensock.com/gsap/" target="_blank" class="credit">GSAP 3</a>
+						<a href="https://howlerjs.com/" target="_blank" class="credit">Howler 2</a>
 					</div>
 				</div>
 			</div>`
