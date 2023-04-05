@@ -32,8 +32,8 @@ const DecadeScreen = (props = {}) => {
             music.play()
             console.log("onEnter")
             if (decade === 1980) {
-              
               console.log('Start Pac-man')
+              $(`#decade-${props?.year} .title`).css({ 'font-family': 'Pacman Dots'})
               gsap.set(`#decade-${props?.year} .title`, { fontFamily: 'Pacman Dots' })
               gsap.fromTo(`#decade-${props?.year} .pacman`, {x: -1800, scale: 6}, {
                 x: 1800, 
