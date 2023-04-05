@@ -37,6 +37,7 @@ const credits = (props) => {
 						<span class="credit">Sass</span>
 						<span class="credit">Javascript with JQuery</span>
 						<span class="credit">GSAP</span>
+						<span class="credit">Parcel Bundler</span>
 						<span class="credit">Howler</span>
 					</div>
 				</div>
