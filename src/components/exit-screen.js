@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import music_player from '../utils/music_player';
 
 const ExitScreen = async(props) => {
   const update = async() => {
@@ -12,7 +13,7 @@ const ExitScreen = async(props) => {
   const afterRender = async() => {
     update()
     $('#exit-screen .button').on('click', async() => {
-      
+      console.log("Exit")
       let page = (await import('../pages/start.js')).default
       page()
     })

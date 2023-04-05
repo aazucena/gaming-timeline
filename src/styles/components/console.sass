@@ -15,7 +15,7 @@
 		flex-direction: column
 		font-size: 2.125rem
 		gap: 1.75rem
-		& *:nth-child(n + 2)
+		& .indent:nth-child(n + 2)
 			margin-left: 1rem
 		& > .console-title
 			display: flex
@@ -24,7 +24,33 @@
 			margin-left: 1.5rem
 			display: flex
 			flex-direction: column
-			gap: 1remfasdfkjns
+			gap: 1rem
+		& > .console-credits
+			margin-left: 1.5rem
+			display: flex
+			flex-direction: column
+			gap: 1.25rem
+			& > .credits-category
+				margin-left: 1.5rem
+				display: flex
+				flex-direction: column
+				gap: 1rem
+				font-size: 1.625rem
+				& > .category
+					display: flex
+					flex-direction: column
+				& > .credits
+					margin-left: 1.5rem
+					display: flex
+					flex-direction: column
+					gap: 0.5rem
+					& > .credit
+						&:before
+							content: '- '
+						display: flex
+						flex-direction: row
+						gap: 1rem
+						text-decoration: none
 	& > .console-terminal
 		display: flex
 		flex-direction: column

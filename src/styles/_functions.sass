@@ -35,6 +35,10 @@
 @function shade-color($color, $weight)
 	@return mix(black, $color, $weight)
 
+// Blend a color: mix a color with another color
+@function blend-color($source, $target, $weight)
+	@return mix($target, $source, $weight)
+
 // Shade the color if the weight is positive, else tint it
 @function shift-color($color, $weight)
 	@return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight))

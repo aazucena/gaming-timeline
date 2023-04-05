@@ -14,13 +14,39 @@ const credits = (props) => {
 	};
 
 	const render = async () => {
+		let credits = (
+			`<div class="console-title">
+					<span class="title">Credits</span>
+			</div>
+			<div class="console-credits">
+				<div class="credits-category">
+					<span class="category">Games & its Resources</span>
+					<div class="credits">
+						<span class="credit">Galaxian</span>
+						<span class="credit">Pac-man</span>
+						<span class="credit">Legend of Zelda: Ocarina of Time</span>
+						<span class="credit">Minecraft</span>
+						<span class="credit">Super Mario Galaxy 2</span>
+						<span class="credit">Among Us</span>
+					</div>
+				</div>
+				<div class="credits-category">
+					<span class="category">Technologies used</span>
+					<div class="credits">
+						<span class="credit">HTML</span>
+						<span class="credit">Sass</span>
+						<span class="credit">Javascript with JQuery</span>
+						<span class="credit">GSAP</span>
+						<span class="credit">Howler</span>
+					</div>
+				</div>
+			</div>`
+		)
 		let page = `
       <div id="credits">
           <div class="console">
               <div class="console-header">
-                  <div class="console-title">
-                      <span class="title">Credits</span>
-                  </div>
+								${credits}
               </div>
               <div class="console-terminal">
                   <div class="terminal-pop">
@@ -45,7 +71,6 @@ const credits = (props) => {
 
 		let onKeyDown = async (event) => {
 			let key = event.originalEvent.key;
-			console.log('🚀 ~ file: credits.js:48 ~ onKeyDown ~ key:', key);
 			switch (key) {
 				case 'Enter':
 					let start = (await import('./start.js')).default;

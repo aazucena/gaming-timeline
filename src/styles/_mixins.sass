@@ -43,7 +43,6 @@
         top: 2000px
         background: transparent
 
-
 @mixin decade($year)
   @if $year == 1970
     background-color: $main-1970-background-color
@@ -51,27 +50,45 @@
     border-color: $main-1970-border-color
     @include stars-background(#FFF)
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-1970-title-font
   @else if $year == 1980
-    background-color: $main-1980-background-color
+    background: url(../assets/images/pacman-maze.png) $main-1980-background-color, rgba(blend-color($main-1980-background-color, blue, 80%), 75%)
+    background-blend-mode: overlay
+    background-size: cover
+    background-attachment: fixed
     color: $main-1980-text-color
     border-color: $main-1980-border-color
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-1980-title-font
   @else if $year == 1990
-    background-color: $main-1990-background-color
+    background: rgba($main-1990-background-color, 0.25), rgba(0, 0, 0, 0.5)
     color: $main-1990-text-color
     border-color: $main-1990-border-color
+    .title-screen > .header > .video
+      object-fit: cover
+      position: absolute
+      width: 100%
+      opacity: 0.5
+      z-index: -20
     .title-screen > .header > .title
       display: flex
       flex-direction: row
       font-family: $main-1990-title-font
       text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5), 0 0.5px 0 #F70202, 0 0 0 tint-color(#F70202, 37.5%), 2px -2px 0 rgba(255, 255, 255, 0.9)
   @else if $year == 2000
-    background-color: $main-2000-background-color
+    background: url(../assets/images/minecraft-grass.png) no-repeat center center $main-2000-background-color, $main-2000-background-color
+    background-blend-mode: overlay
+    background-size: cover
+    background-attachment: fixed
     color: $main-2000-text-color
     border-color: $main-2000-border-color
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-2000-title-font
       text-shadow: extra-text-shadow(shade-color(#C5B6B3, 37.5%), 60) !important
       -webkit-text-stroke: 0.75px shade-color(#C5B6B3, 50%)
@@ -95,6 +112,7 @@
         padding: 0 0.25rem
         background-clip: text
         -webkit-background-clip: text
+        cursor: pointer
       & div:nth-child(1)
         text-shadow: 0px 1px 4px rgba(#049CD8, 90%), 0px 4px 4px #EEE, 2px 8px 4px #DDD, 3px 16px 4px #CCC, extra-text-shadow(shade-color(#FFFFFF, 25%), 35, 1px, 0px)
       & div:nth-child(2)
@@ -109,6 +127,8 @@
     border-color: $main-2020-border-color
     @include stars-background(#FFF)
     .title-screen > .header > .title
+      display: flex
+      flex-direction: row
       font-family: $main-2020-title-font
   @else
     @error "Unknown year #{$year}"
