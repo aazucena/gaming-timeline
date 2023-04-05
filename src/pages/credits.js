@@ -31,6 +31,22 @@ const credits = (props) => {
 					</div>
 				</div>
 				<div class="credits-category">
+					<span class="category">Fonts</span>
+					<div class="credits">
+						<a href="https://fonts.google.com/specimen/Inconsolata" target="_blank" class="credit">Inconsolata</a>
+						<a href="https://fonts.google.com/specimen/Odibee+Sans" target="_blank" class="credit">Odibee Sans</a>
+						<a href="https://www.cdnfonts.com/lg-a100.font" target="_blank" class="credit">LG A100</a>
+						<a href="https://www.1001fonts.com/crackman-font.html" target="_blank" class="credit">CrackMan</a>
+						<a href="https://www.dafont.com/triforce.font" target="_blank" class="credit">Triforce</a>
+						<a href="https://artsyomni.com/hyliaserif" target="_blank" class="credit">Hylia Serif</a>
+						<a href="https://www.dafont.com/super-mario-256.font" target="_blank" class="credit">Super Mario 256</a>
+						<a href="https://www.fontspace.com/minecraft-ten-font-f40317" target="_blank" class="credit">Minecraft Ten</a>
+						<a href="https://www.fontspace.com/minecraft-evenings-font-f17735" target="_blank" class="credit">Minecraft Evenings</a>
+						<a href="https://www.dafont.com/in-your-face-joffrey.font" target="_blank" class="credit">In your face, Joffrey!</a>
+						<a href="https://www.fontspace.com/videobeast-80s-font-f2400" target="_blank" class="credit">Pacman Dots</a>
+					</div>
+				</div>
+				<div class="credits-category">
 					<span class="category">Technologies Used</span>
 					<div class="credits">
 						<a href="https://parceljs.org/" target="_blank" class="credit">Parcel Bundler 2</a>

@@ -1,13 +1,12 @@
 import $ from 'jquery';
-import DecadesPage from './decades.js'
+import DecadesPage from './decades.js';
 import music_player from '../utils/music_player';
-
 
 const StartPage = async (props) => {
 	const beforeRender = async () => {
 		Object.values(music_player).forEach((music) => {
-			music.stop()
-		})
+			music.stop();
+		});
 		let hasChildren = $('#app').children().length > 0;
 		if (hasChildren) {
 			if (props?.transition && !isNaN(props?.transition)) {
@@ -30,7 +29,10 @@ const StartPage = async (props) => {
                     </div>
                     <div class="indent console-instructions">
                         <span class="instructions">Type "start.exe" (or "start") and press [Enter] to start the creating video games.</span>
-                        <span class="indent instructions">Type "credits.exe" (or "credits") and press [Enter] to show credits & resources for the website.</span>
+                        <span class="indent instructions">Type "intent.exe" (or "intent") and press [Enter] to show intent description for the website.</span>
+												<span class="indent">
+													<span class="indent instructions">Type "credits.exe" (or "credits") and press [Enter] to show credits & resources for the website.</span>
+												</span>
                     </div>
                 </div>
                 <div class="console-terminal">
@@ -59,8 +61,8 @@ const StartPage = async (props) => {
 
 	const afterRender = async () => {
 		Object.values(music_player).forEach((music) => {
-			music.stop()
-		})
+			music.stop();
+		});
 		let terminal_id = `terminal`;
 		let terminal_cli = $(
 			`.${terminal_id} > .terminal-container > .terminal-cli`
@@ -136,6 +138,13 @@ const StartPage = async (props) => {
 							`<div class="terminal-popup"><span>Do you mean <i>credits</i> or <i>credits.exe</i></span></div>`
 						);
 						break;
+					case val.includes('intent'):
+					case 'intent'.includes(val):
+						$('.console-terminal .terminal-popup').remove();
+						$('.console-terminal').prepend(
+							`<div class="terminal-popup"><span>Do you mean <i>intent</i> or <i>intent.exe</i></span></div>`
+						);
+						break;
 					case !!val && val.length > 0:
 						$('.console-terminal .terminal-popup').remove();
 						let result = val.length > 12 ? val.slice(0, 12) + '...' : name;
@@ -151,12 +160,12 @@ const StartPage = async (props) => {
 						break;
 				}
 			};
-            
+
 			switch (true) {
 				case 'start.exe' === name:
 				case 'start' === name:
-                    $('.console-terminal .terminal-popup').remove();
-                    $('.console-terminal .terminal').remove();
+					$('.console-terminal .terminal-popup').remove();
+					$('.console-terminal .terminal').remove();
 					$('.console-terminal').prepend(
 						`<div class="terminal-popup">Running Video Game History 0.0.1...</div>`
 					);
@@ -170,8 +179,8 @@ const StartPage = async (props) => {
 					break;
 				case 'credits.exe' === name:
 				case 'credits' === name:
-                    $('.console-terminal .terminal-popup').remove();
-                    $('.console-terminal .terminal').remove();
+					$('.console-terminal .terminal-popup').remove();
+					$('.console-terminal .terminal').remove();
 					$('.console-terminal').prepend(
 						`<div class="terminal-popup">Running Credits for Video Game History 0.0.1...</div>`
 					);
@@ -182,6 +191,22 @@ const StartPage = async (props) => {
 					$(document.body).off('keypress');
 					setTimeout(() => {
 						credits();
+					}, 400);
+					break;
+				case 'intent.exe' === name:
+				case 'intent' === name:
+					$('.console-terminal .terminal-popup').remove();
+					$('.console-terminal .terminal').remove();
+					$('.console-terminal').prepend(
+						`<div class="terminal-popup">Running Intent for Video Game History 0.0.1...</div>`
+					);
+					let intent = (await import('./intent.js')).default;
+					$(document).off('keydown');
+					$(document.body).off('keydown');
+					$(document).off('keypress');
+					$(document.body).off('keypress');
+					setTimeout(() => {
+						intent();
 					}, 400);
 					break;
 				default:

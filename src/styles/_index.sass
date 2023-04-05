@@ -19,6 +19,7 @@
 		max-height: 100vh
 		z-index: 4000
 	&:has(#app > #start),
+	&:has(#app > #intent),
 	&:has(#app > #credits)
 		color: $terminal-text-color
 		font-family: $terminal-font
@@ -38,13 +39,15 @@
 		background-size: 600% 600%
 		animation: main_background 30s ease infinite
 
-#app > #exit
+#app > #exit,
+#app > #intent
 	background-size: 600% 600%
 	height: 100vh
 
 #app,
 #start,
 #credits,
+#intent,
 #decades
 	display: flex
 	flex-direction: column
@@ -52,13 +55,15 @@
 	align-items: center
 	width: 100%
 	
+
+#credits .console
+	overflow-y: scroll
+	
 #start,
+#intent,
 #credits
 	overflow: hidden
 	height: 100vh
-
-#start,
-#credits
 	background-color: $terminal-background-color
 
 
