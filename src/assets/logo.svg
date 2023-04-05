@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.62426712"
+     inkscape:cx="-24.829115"
+     inkscape:cy="527.01799"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="1072"
+     inkscape:window-y="131"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="gameinsights"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#911f9d;fill-opacity:1;stroke:#337c59;stroke-width:1.82948;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 89.758998,186.34061 c 6.984953,-5.72157 10.701632,-10.57643 11.557862,-20.52136 L 68.243595,96.786189 48.688853,93.687321 Z"
+       id="path238"
+       sodipodi:nodetypes="ccccc"
+       inkscape:label="I-logo" />
+    <path
+       style="fill:#ca25da;fill-opacity:1;stroke:#4ab582;stroke-width:1.842;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 87.795185,50.79319 C 38.643697,38.559844 24.073582,73.531863 24.649647,98.454527 25.515073,135.89592 57.728256,145.89142 81.401496,136.52132 100.31569,127.85544 107.73143,103.84429 107.73143,103.84429 88.182691,99.563229 68.347852,96.777075 48.606295,93.547885 l 4.981884,11.369085 37.247461,7.76538 C 39.009939,155.25069 20.086725,75.915922 60.140415,64.826951 78.444667,61.118406 103.49961,71.66914 103.49961,71.66914 Z"
+       id="path236"
+       sodipodi:nodetypes="cscccccccc"
+       inkscape:label="G-logo" />
+  </g>
+</svg>
