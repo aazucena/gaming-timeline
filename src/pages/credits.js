@@ -22,12 +22,51 @@ const credits = (props) => {
 				<div class="credits-category">
 					<span class="category">Games & Their Resources</span>
 					<div class="credits">
-						<a href="https://en.wikipedia.org/wiki/Galaxian" target="_blank" class="credit">Galaxian</a>
-						<a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank" class="credit">Pac-man</a>
-						<a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time" target="_blank" class="credit">Legend of Zelda: Ocarina of Time</a>
-						<a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank" class="credit">Minecraft</a>
-						<a href="https://en.wikipedia.org/wiki/Super_Mario_Galaxy_2" target="_blank" class="credit">Super Mario Galaxy 2</a>
-						<a href="https://en.wikipedia.org/wiki/Among_Us" target="_blank" class="credit">Among Us</a>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/Galaxian" target="_blank" class="credit-title">Galaxian</a>
+							<div class="subcredits">
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=250332476&searchtext=" class="subcredit">Galaga/Galaxian Ship Image</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/galaga/24%2520Name%2520Entry%2520%25282nd-5th%2529.mp3" class="subcredit">Galaga/Galaxian Name Entry Theme</a>
+								<a href="http://soundfxcenter.com/download-sound/galaga-firing-sound-effect/" class="subcredit">Galaga/Galaxian Laser SFX</a>
+							</div>
+						</div>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank" class="credit-title">Pac-man</a>
+							<div class="subcredits">
+								<a href="https://www.pinterest.ca/pin/253468285252737574/" class="subcredit">Pac-man Maze Background Image</a>
+								<a href="https://codepen.io/nshew/pen/WNvGKLY" class="subcredit">Pac-man SVG Animation</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/pac-man-arcade/pac-man-intro.mp3" class="subcredit">Pac-man Main Theme</a>
+							</div>
+						</div>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time" target="_blank" class="credit-title">Legend of Zelda: Ocarina of Time</a>
+							<div class="subcredits">
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/the-legend-of-zelda-ocarina-of-time/01%2520Prelude%2520of%2520Time.mp3" class="subcredit">The Legend of Zelda: Ocarina of Time - Prelude of Time Theme</a>
+								<a href="https://www.youtube.com/watch?v=iNhsssDspEs" class="subcredit">The Legend of Zelda: Ocarina of Time - Title Screen Video</a>
+								<a href="https://noproblo.dayjo.org/ZeldaSounds/OOT/index.html" class="subcredit">The Legend of Zelda: Ocarina of Time - Ocarina Notes</a>
+							</div>
+						</div>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank" class="credit-title">Minecraft</a>
+							<div class="subcredits">
+								<a href="https://wallpaperaccess.com/minecraft-grass" class="subcredit">Minecraft Grass Background Image</a>
+								<a href="https://www.youtube.com/watch?v=4E2ag-9hD-c" class="subcredit">Minecraft Pickaxe SFX</a>
+							</div>
+						</div>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/Super_Mario_Galaxy_2" target="_blank" class="credit-title">Super Mario Galaxy 2</a>
+							<div class="subcredits">
+								<a href="https://www.pinterest.ca/pin/retro-coin-icon-super-mario-icons--338332990733860823/" class="subcredit">Mario Coin</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/super-mario-galaxy-2/2-29%2520Super%2520Mario%2520Galaxy%25202.mp3" class="subcredit">Super Mario Galaxy 2 - Main Theme</a>
+							</div>
+						</div>
+						<div class="credit-item">
+							<a href="https://en.wikipedia.org/wiki/Among_Us" target="_blank" class="credit-title">Among Us</a>
+							<div class="subcredits">
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/among-us/Among%2520Us%2520Theme.mp3" class="subcredit">Among Us - Main Theme</a>
+								<a href="https://www.spriters-resource.com/pc_computer/amongus/sheet/139386/" class="subcredit">Among Us - Sprites</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="credits-category">

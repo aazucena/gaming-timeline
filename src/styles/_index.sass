@@ -6,10 +6,19 @@
 @import 'keyframes'
 @import 'defaults'
 
+@-moz-document url-prefix()
+	:root
+		scrollbar-width: none
+	:is(#body, #app, #start),
+	:is(#body, #app, #intent),
+	:is(#body, #app, #credits)
+		color: $terminal-text-color
+		font-family: $terminal-font
+
 #body
 	display: flex
 	flex-direction: column
-	justify-content:  flex-start
+	justify-content: flex-start
 	align-items: center
 	width: 100%
 	max-height: 100vh
@@ -35,9 +44,9 @@
 		display: none
 
 #app > #main
-		background: linear-gradient(270deg, $main-gradient-color-1, $main-gradient-color-2, $main-gradient-color-3)
-		background-size: 600% 600%
-		animation: main_background 30s ease infinite
+	background: linear-gradient(270deg, $main-gradient-color-1, $main-gradient-color-2, $main-gradient-color-3)
+	background-size: 600% 600%
+	animation: main_background 30s ease infinite
 
 #app > #exit,
 #app > #intent
@@ -51,21 +60,23 @@
 #decades
 	display: flex
 	flex-direction: column
-	justify-content:  flex-start
+	justify-content: flex-start
 	align-items: center
 	width: 100%
-	
 
 #credits .console
 	overflow-y: scroll
-	
+	-ms-overflow-style: none
+	scrollbar-width: none
+
 #start,
 #intent,
 #credits
 	overflow: hidden
+	-ms-overflow-style: none
+	scrollbar-width: none
 	height: 100vh
 	background-color: $terminal-background-color
-
 
 @import 'components/navbar'
 @import 'components/console'

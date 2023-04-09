@@ -1,5 +1,25 @@
 $years: (1970, 1980, 1990, 2000, 2010, 2020)
 
+@-moz-document url-prefix()
+  #decades #decade-1970 > .title-screen > .header .svg-char
+    transform: translateY(450px)
+  #decades #decade-1980 > .title-screen > .header .svg-char
+    transform: translateY(0px)
+  #decades #decade-1990 > .title-screen > .header .svg-char
+    padding: 0.75rem
+    gap: 0.75rem
+    opacity: 0
+  #decades #decade-2000 > .title-screen > .header .svg-char
+    transform: translateY(0px)
+  #decades #decade-2010 > .title-screen > .header .svg-char
+    padding: 0.75rem
+    gap: 0.75rem
+    opacity: 0
+  #decades #decade-2020 > .title-screen > .header .svg-char
+    transform: translateY(0px)
+  .video
+    height: inherit
+
 #decades .decade
   display: flex
   flex-direction: column
