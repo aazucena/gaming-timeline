@@ -25,17 +25,17 @@ const credits = (props) => {
 						<div class="credit-item">
 							<a href="https://en.wikipedia.org/wiki/Galaxian" target="_blank" class="credit-title">Galaxian</a>
 							<div class="subcredits">
-								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=250332476&searchtext=" class="subcredit">Galaga/Galaxian Ship Image</a>
-								<a href="https://downloads.khinsider.com/game-soundtracks/album/galaga/24%2520Name%2520Entry%2520%25282nd-5th%2529.mp3" class="subcredit">Galaga/Galaxian Name Entry Theme</a>
-								<a href="http://soundfxcenter.com/download-sound/galaga-firing-sound-effect/" class="subcredit">Galaga/Galaxian Laser SFX</a>
+								<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=250332476&searchtext=" class="subcredit">Galaga/Galaxian - Ship Image</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/galaga/24%2520Name%2520Entry%2520%25282nd-5th%2529.mp3" class="subcredit">Galaga/Galaxian - Name Entry Theme</a>
+								<a href="http://soundfxcenter.com/download-sound/galaga-firing-sound-effect/" class="subcredit">Galaga/Galaxian - Laser SFX</a>
 							</div>
 						</div>
 						<div class="credit-item">
 							<a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank" class="credit-title">Pac-man</a>
 							<div class="subcredits">
-								<a href="https://www.pinterest.ca/pin/253468285252737574/" class="subcredit">Pac-man Maze Background Image</a>
-								<a href="https://codepen.io/nshew/pen/WNvGKLY" class="subcredit">Pac-man SVG Animation</a>
-								<a href="https://downloads.khinsider.com/game-soundtracks/album/pac-man-arcade/pac-man-intro.mp3" class="subcredit">Pac-man Main Theme</a>
+								<a href="https://www.pinterest.ca/pin/253468285252737574/" class="subcredit">Pac-man - Maze Background Image</a>
+								<a href="https://codepen.io/nshew/pen/WNvGKLY" class="subcredit">Pac-man - SVG Animation</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/pac-man-arcade/pac-man-intro.mp3" class="subcredit">Pac-man - Main Theme</a>
 							</div>
 						</div>
 						<div class="credit-item">
@@ -49,8 +49,9 @@ const credits = (props) => {
 						<div class="credit-item">
 							<a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank" class="credit-title">Minecraft</a>
 							<div class="subcredits">
-								<a href="https://wallpaperaccess.com/minecraft-grass" class="subcredit">Minecraft Grass Background Image</a>
-								<a href="https://www.youtube.com/watch?v=4E2ag-9hD-c" class="subcredit">Minecraft Pickaxe SFX</a>
+								<a href="https://wallpaperaccess.com/minecraft-grass" class="subcredit">Minecraft - Grass Background Image</a>
+								<a href="https://downloads.khinsider.com/game-soundtracks/album/minecraft-in-game-survival-music-c418-songs-gamerip-2011/01.%2520Menu1.mp3" class="subcredit">Minecraft - Menu 1 Theme</a>
+								<a href="https://www.youtube.com/watch?v=4E2ag-9hD-c" class="subcredit">Minecraft - Pickaxe SFX</a>
 							</div>
 						</div>
 						<div class="credit-item">
